@@ -28,7 +28,7 @@ export async function downloadAllAsZip(files: MarkdownFile[]): Promise<void> {
     
     const link = document.createElement('a');
     link.href = url;
-    link.download = `docsend-markdown-${new Date().toISOString().split('T')[0]}.zip`;
+    link.download = `markdown-files-${new Date().toISOString().split('T')[0]}.zip`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
